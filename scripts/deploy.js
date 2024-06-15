@@ -1,3 +1,6 @@
+const ethers = require('ethers');
+
+const hre = require("hardhat");
 async function main() {
   const greeterABI = await ethers.getContractFactory("Greeter");
   const greeter = await greeterABI.deploy("Hello, Hardhat!");
